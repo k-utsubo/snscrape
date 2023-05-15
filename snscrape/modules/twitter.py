@@ -731,7 +731,7 @@ class _TwitterAPIScraper(snscrape.base.Scraper):
 			if not self._guestTokenManager.token:
 				_logger.debug('No guest token in response')
 				_logger.info('Retrieving guest token via API')
-				r = self._post('https://api.twitter.com/1.1/guest/activate.json', data = b'', headers = self._apiHeaders, responseOkCallback = self._check_guest_token_response)
+				r = self._post('https://api.twitter.com/2/guest/activate.json', data = b'', headers = self._apiHeaders, responseOkCallback = self._check_guest_token_response)
 				o = r.json()
 				if not o.get('guest_token'):
 					raise snscrape.base.ScraperException('Unable to retrieve guest token')
