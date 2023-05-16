@@ -707,7 +707,7 @@ class _TwitterAPIScraper(snscrape.base.Scraper):
 		self._apiHeaders = {
 			'Authorization': _API_AUTHORIZATION_HEADER,
 			'Referer': self._baseUrl,
-			'Accept-Language': 'en-US,en;q=0.5',
+			'Accept-Language': 'ja-JP,ja;q=0.5',
 		}
 		adapter = _TwitterTLSAdapter()
 		self._session.mount('https://twitter.com', adapter)
